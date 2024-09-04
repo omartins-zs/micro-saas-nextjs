@@ -3,8 +3,14 @@
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
+import { useForm } from 'react-hook-form'
 
 export function AuthForm() {
+  const form = useForm()
+
+  const handleSubmit = form.handleSubmit((data) => {
+    console.log(data)
+  })
 
   return (
     <div className="mx-auto max-w-sm space-y-8">
@@ -14,7 +20,7 @@ export function AuthForm() {
           Enter your email below to login to your account
         </p>
       </div>
-      <form className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
           <Input
@@ -22,6 +28,7 @@ export function AuthForm() {
             placeholder="m@example.com"
             required
             type="email"
+            {...form.register('email')}
           />
         </div>
         <Button
