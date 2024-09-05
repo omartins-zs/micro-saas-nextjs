@@ -1,12 +1,11 @@
 import NextAuth from "next-auth";
 import EmailProvider from "next-auth/providers/email";
+
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "../database";
-
-// Verifique se a importação de NextAuth está correta
-// Certifique-se de que NextAuth é importado corretamente e que a configuração está correta
-const {
-	handlers: { GET, POST }, // Verifique se handlers GET e POST estão sendo retornados corretamente
+console.log(process.env.EMAIL_SERVER)
+export const {
+	handlers: { GET, POST },
 	auth,
 } = NextAuth({
 	pages: {
@@ -25,5 +24,3 @@ const {
 		}),
 	],
 });
-
-export { GET, POST, auth }; // Certifique-se de exportar GET e POST corretamente
