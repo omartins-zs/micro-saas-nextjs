@@ -1,0 +1,90 @@
+
+
+Next JS
+npx create-next-app@latest micro-saas-nextjs
+
+
+shadcn ui
+
+ npx shadcn@latest init
+
+
+$  npx shadcn@latest add
+
+
+v0.dev
+
+
+Importando o component do Auth Form
+Instalando Biblioteca react-hook-form
+npm install react-hook-form
+
+npm install next-auth
+
+npm install prisma --save-dev
+
+npx prisma migrate dev --name init
+
+npm install @auth/prisma-adapter
+
+npm install nodemailer
+
+https://authjs.dev/getting-started/migrating-to-v5
+
+https://mailtrap.io/
+
+https://www.prisma.io/docs/getting-started/quickstart
+
+https://next-auth.js.org/getting-started/example
+
+https://react-hook-form.com/get-started
+
+https://ui.shadcn.com/docs/installation/next
+
+https://nextjs.org/docs/getting-started/installation
+
+npx prisma studio
+
+
+Para gerar Next aUTH mISSING sECRET
+
+openssl rand -base64 32
+
+
+Layout do Linear App https://linear.app/
+
+https://github.com/Rocketseat/eslint-config-rocketseat
+Rocketseat/eslint-config
+npm i -D eslint @rocketseat/eslint-config
+
+
+https://www.radix-ui.com/icons
+---------------------------------------
+Micro-SaaS na Prática: Setup com Next.js 14, Shadcn UI e Autenticação com Next Auth [+ Bônus]
+
+
+Iniciando Projeto de Micro-Saas com NPM
+
+npx create-next-app@14.1.0 micro-sass-nextjs
+
+
+
+Instalando a Biblioteca Shadcn UI
+
+
+
+
+npx shadcn-ui@latest init
+npx shadcn-ui@latest add
+
+
+npm install react-hook-form
+
+
+npm install next-auth@beta
+npm install prisma --save-dev
+
+npx prisma init
+
+   https://v0.dev/          Generate. Refine. Ship.
+
