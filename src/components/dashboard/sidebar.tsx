@@ -45,7 +45,7 @@ export function Sidebar({ className, children }: SidebarGenericProps) {
 }
 
 export function SidebarHeader({ className, children }: SidebarGenericProps) {
-  return <header className={cn(["px-6", className])}>{children}</header>;
+  return <header className={cn(["px-6 py-3 border-b border-border", className])}>{children}</header>;
 }
 export function SidebarHeaderTitle({
   className,
@@ -100,7 +100,7 @@ export function SidebarNavLink({
   return (
     <Link
       href={href}
-      className={cn(["text-sm px-3 py-2", active && "bg-secondary", className])}
+      className={cn(["flex -tems-center text-xs px-3 py-2 rounded-md", active && "bg-secondary", className])}
     >
       {children}
     </Link>
