@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Sidebar,
   SidebarFooter,
@@ -9,8 +11,15 @@ import {
   SidebarNavLink,
   SidebarNavMain,
 } from "@/components/dashboard/sidebar";
+import { usePathname } from "next/navigation";
 
 export function MainSidebar() {
+  const pathname = usePathname()
+
+  const isActive = (path: string) => {
+    return pathname === path
+  }
+
   return (
     <Sidebar>
       <SidebarHeader>
@@ -19,8 +28,8 @@ export function MainSidebar() {
       <SidebarMain className="flex flex-col flex-grow">
         <SidebarNav>
           <SidebarNavMain>
-            <SidebarNavLink href="/app">Tarefas</SidebarNavLink>
-            <SidebarNavLink href="/app/settings">Configurações</SidebarNavLink>
+            <SidebarNavLink href="/app" active={isActive('/app')}>Tarefas</SidebarNavLink>
+            <SidebarNavLink href="/app/settings" active={isActive('/app/settings')}>Configurações</SidebarNavLink>
           </SidebarNavMain>
         </SidebarNav>
 
