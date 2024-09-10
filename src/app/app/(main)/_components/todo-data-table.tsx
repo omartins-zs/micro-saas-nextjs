@@ -13,19 +13,17 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
+import { ArrowUpDown, MoreHorizontal } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
 import {
   Table,
   TableBody,
@@ -51,7 +49,6 @@ const data: Todo[] = [
     title: "Teste 1",
     createdAt: new Date('2023-04-11'),
     updatedAt: new Date('2023-04-12'),
-    finishedAt: new Date('2023-04-13'),
   },
   {
     id: "2",
@@ -65,7 +62,6 @@ const data: Todo[] = [
     title: "Teste 3",
     createdAt: new Date('2023-04-13'),
     updatedAt: new Date('2023-04-14'),
-    finishedAt: new Date('2023-04-15'),
   },
   {
     id: "4",
