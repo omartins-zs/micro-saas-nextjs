@@ -16,7 +16,6 @@ import {
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -35,6 +34,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { Badge } from "@/components/ui/badge"
 
 export type Todo = {
     id: string
@@ -83,14 +83,21 @@ const data: Todo[] = [
   },
 ]
 
-export const columns: ColumnDef<Todo>[] = [
-  {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => (
-      <div className="capitalize"></div>
-    ),
-  },
+const columns: ColumnDef<Todo>[] = [
+    {
+      accessorKey: 'status',
+      header: 'Status',
+      cell: ({ row }) => {
+        const { finishedAt } = row.original
+
+        const status: 'done' | 'waiting' = finishedAt ? 'done' : 'waiting'
+        const variant: 'outline' | 'secondary' = finishedAt
+          ? 'outline'
+          : 'secondary'
+
+        return <Badge variant={variant}>{status}</Badge>
+      },
+    },
   {
     accessorKey: "title",
     header: ({ column }) => {
