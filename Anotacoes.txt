@@ -59,6 +59,11 @@ npm i -D eslint @rocketseat/eslint-config
 
 
 https://www.radix-ui.com/icons
+
+
+npm install @tanstack/react-table
+
+npm install @hookform/resolvers
 ---------------------------------------
 Micro-SaaS na Prática: Setup com Next.js 14, Shadcn UI e Autenticação com Next Auth [+ Bônus]
 
