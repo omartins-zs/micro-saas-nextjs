@@ -47,8 +47,8 @@ export function ProfileForm({ defaultValues }: ProfileFormProps) {
     router.refresh()
 
     toast({
-      title: 'Success',
-      description: 'Your profile has been updated successfully.',
+      title: 'Sucesso',
+      description: 'Seu perfil foi atualizado com sucesso.',
     })
   })
 
@@ -57,9 +57,9 @@ export function ProfileForm({ defaultValues }: ProfileFormProps) {
       <form onSubmit={onSubmit} className="space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle>Name</CardTitle>
+            <CardTitle>Nome</CardTitle>
             <CardDescription>
-              This will be the publicity displayed name.
+              Este será o nome exibido publicamente.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -70,7 +70,7 @@ export function ProfileForm({ defaultValues }: ProfileFormProps) {
                 <FormItem>
                   <FormLabel>Nome</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter your name" {...field} />
+                    <Input placeholder="Digite seu nome" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -83,7 +83,8 @@ export function ProfileForm({ defaultValues }: ProfileFormProps) {
           <CardHeader>
             <CardTitle>Email</CardTitle>
             <CardDescription>
-             Please contact email contact@micro-saas.com to change the email.
+              Entre em contato pelo email contact@micro-saas.com para alterar o
+              email.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -94,7 +95,7 @@ export function ProfileForm({ defaultValues }: ProfileFormProps) {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter your email" readOnly {...field} />
+                    <Input placeholder="Digite seu email" readOnly {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -105,8 +106,8 @@ export function ProfileForm({ defaultValues }: ProfileFormProps) {
 
         <SheetFooter className="mt-auto">
           <Button disabled={form.formState.isLoading} type="submit">
-            {form.formState.isSubmitting && 'Saving...'}
-            {!form.formState.isSubmitting && 'Save changes'}
+            {form.formState.isSubmitting && 'Salvando...'}
+            {!form.formState.isSubmitting && 'Salvar alterações'}
           </Button>
         </SheetFooter>
       </form>
