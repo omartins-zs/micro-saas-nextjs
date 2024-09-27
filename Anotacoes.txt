@@ -64,6 +64,9 @@ https://www.radix-ui.com/icons
 npm install @tanstack/react-table
 
 npm install @hookform/resolvers
+
+ npm i next-themes
+
 ---------------------------------------
 Micro-SaaS na Prática: Setup com Next.js 14, Shadcn UI e Autenticação com Next Auth [+ Bônus]
 
