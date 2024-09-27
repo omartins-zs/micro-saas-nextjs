@@ -59,7 +59,7 @@ export function ProfileForm({ defaultValues }: ProfileFormProps) {
           <CardHeader>
             <CardTitle>Name</CardTitle>
             <CardDescription>
-              Este será o nome exibido publicamente.
+              This will be the publicity displayed name.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -105,7 +105,7 @@ export function ProfileForm({ defaultValues }: ProfileFormProps) {
 
         <SheetFooter className="mt-auto">
           <Button disabled={form.formState.isLoading} type="submit">
-            {form.formState.isSubmitting && 'Salvando...'}
+            {form.formState.isSubmitting && 'Saving...'}
             {!form.formState.isSubmitting && 'Save changes'}
           </Button>
         </SheetFooter>
