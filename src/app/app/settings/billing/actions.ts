@@ -1,3 +1,6 @@
 'use server'
 
-import { auth } from '@/services/auth'
+
+export async function createCheckoutSessionAction() {
+  console.log("123")
+}
