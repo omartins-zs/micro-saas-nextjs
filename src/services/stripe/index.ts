@@ -134,3 +134,59 @@ export const handleProcessWebhookUpdatedSubscription = async (event: {
     },
   })
 }
+export const getPlanByPrice = (priceId: string) => {
+  const plans: Plans = config.stripe.plans
+
+  const planKey = Object.keys(plans).find(
+    (key) => plans[key].priceId === priceId,
+  ) as keyof Plans | undefined
+
+  const plan = planKey ? plans[planKey] : null
+
+  if (!plan) {
+    throw new Error(`Plan not found for priceId: ${priceId}`)
+  }
+
+  return {
+    name: planKey,
+    quota: plan.quota,
+  }
+}
+
+export const getUserCurrentPlan = async (userId: string) => {
+  const user = await prisma.user.findUnique({
+    where: {
+      id: userId,
+    },
+    select: {
+      stripePriceId: true,
+    },
+  })
+
+  if (!user || !user.stripePriceId) {
+    throw new Error('User or user stripePriceId not found')
+  }
+
+  const plan = getPlanByPrice(user.stripePriceId)
+
+  const tasksCount = await prisma.todo.count({
+    where: {
+      userId,
+    },
+  })
+
+  const availableTasks = plan.quota.TASKS
+  const currentTasks = tasksCount
+  const usage = (currentTasks / availableTasks) * 100
+
+  return {
+    name: plan.name,
+    quota: {
+      TASKS: {
+        available: availableTasks,
+        current: currentTasks,
+        usage,
+      },
+    },
+  }
+}
