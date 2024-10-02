@@ -13,19 +13,36 @@ export const getStripeCustomerByEmail = async (email: string) => {
   return customers.data[0];
 }
 
-export const createStripeCustomer = async (
-  input: {
-    name?: string,
-    email: string
-  }
-) => {
-  let customer = await getStripeCustomerByEmail(input.email)
+export const createStripeCustomer = async (input: {
+  name?: string
+  email: string
+}) => {
+  const customer = await getStripeCustomerByEmail(input.email)
   if (customer) return customer
 
-  return stripe.customers.create({
+  const createdCustomer = await stripe.customers.create({
     email: input.email,
-    name: input.name
-  });
+    name: input.name,
+  })
+
+  const createdCustomerSubscription = await stripe.subscriptions.create({
+    customer: createdCustomer.id,
+    items: [{ price: config.stripe.plans.free.priceId }],
+  })
+
+  await prisma.user.update({
+    where: {
+      email: input.email,
+    },
+    data: {
+      stripeCustomerId: createdCustomer.id,
+      stripeSubscriptionId: createdCustomerSubscription.id,
+      stripeSubscriptionStatus: createdCustomerSubscription.status,
+      stripePriceId: config.stripe.plans.free.priceId,
+    },
+  })
+
+  return createdCustomer
 }
 
 export const createCheckoutSession = async (userId: string, userEmail: string) => {
