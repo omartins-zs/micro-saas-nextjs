@@ -1,14 +1,14 @@
 <h1 align="center">
   <img align="left" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg">
-  Micro SaaS - Next.js <img align="right" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/prisma/prisma-original.svg">
+  Micro SaaS - Next.js 14 <img align="right" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/prisma/prisma-original.svg">
 </h1>
 
 <div align="center">
-  API desenvolvida utilizando Next.js, Shadcn UI, Prisma e Next Auth.
+  Micro Saas de Tarefas desenvolvido com Next.js 14, Shadcn UI, Prisma e Next Auth.
 </div>
 
 <div align="center">
-  <cite>Um projeto SaaS focado em autenticação, gerenciamento de usuários e integração com Stripe para assinaturas</cite>
+  <cite>Um projeto SaaS autenticação e login com magic link, gerenciamento de usuários, e integração com Stripe para assinaturas, utilizando o padrão de componentes Composition Pattern.</cite>
 </div>
 
 <p align="center">
