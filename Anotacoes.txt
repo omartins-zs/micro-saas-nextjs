@@ -65,8 +65,21 @@ npm install @tanstack/react-table
 
 npm install @hookform/resolvers
 
- npm i next-themes
+npm i next-themes
 
+npm i stripe
+
+Em configurações portal do cliente Ativar link do site
+
+Em assinatura Ativar os clientes podem alternar o plano
+
+e selecioanr osplanos free  pro
+
+Acessar https://docs.stripe.com/stripe-cli e seguir passo a passo
+
+stripe listen forward-to localhost:/300/api/stripe/webhook
+
+ Copiar secret key e adicionar no ENV
 ---------------------------------------
 Micro-SaaS na Prática: Setup com Next.js 14, Shadcn UI e Autenticação com Next Auth [+ Bônus]
 
