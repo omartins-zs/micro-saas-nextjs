@@ -1,14 +1,19 @@
-<h1 align="center">
-  <img align="left" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg">
-  Micro SaaS - Next.js 14 <img align="right" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/prisma/prisma-original.svg">
-</h1>
+<h1 align="center"><img align="left" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg">
+  Micro SaaS - Next.js 14 <img align="right" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/prisma/prisma-original.svg"></h1>
 
-<div align="center">
+ <div align="center">
+
+ 
   Micro SaaS de Tarefas desenvolvido com Next.js 14, Shadcn UI, Prisma e Next Auth.
+
 </div>
 
+
+
 <div align="center">
-  <cite>Um projeto SaaS focado em autenticação e login com magic link, gerenciamento de usuários, e integração com Stripe para assinaturas, utilizando o padrão de componentes (Composition Pattern).</cite>
+  
+  <cite>`Um projeto SaaS focado em autenticação e login com magic link, gerenciamento de usuários, e integração com Stripe para assinaturas, utilizando o padrão de componentes (Composition Pattern).`</cite>
+  
 </div>
 
 <p align="center">
@@ -22,6 +27,14 @@
 <h4 align="center">
    ✅ Micro SaaS - Next.js 🚀 Concluído ✅
 </h4>
+
+
+ <div align="center">
+
+   <cite align="center">`http://localhost:5000`</cite>
+
+</div>
+
 
 ## 🔥 **Pré-requisitos**
 
@@ -54,8 +67,10 @@
   <img align="center" src="./DocumentacaoSaasNext.png" alt="Documentação do Projeto">
 </div> -->
 
-## 📝 Pacotes Utilizados
+## 📝 Pacotes do Nuget e Extensões
+
 <i>
+
 - **Prisma** - ORM para manipulação do banco de dados
 - **NextAuth.js** - Gerenciamento de autenticação e sessões
 - **React Hook Form** - Gerenciamento de formulários com validação
@@ -63,10 +78,15 @@
 - **Nodemailer** - Envio de emails de confirmação de cadastro
 - **ESLint Rocketseat Config** - Configuração do ESLint para padronização de código
 - **Tanstack React Table** - Gerenciamento de tabelas no frontend
+ 
+
 </i>
 
-## Comandos 👨‍💻💻
+<br>
+ 
+## Comandos 👨‍💻💻  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"/>
 ```bash
+
 # Criar um projeto Next.js
 $ npx create-next-app@latest micro-saas-nextjs
 
@@ -104,8 +124,7 @@ $ yarn dev
 $ pnpm dev
 # ou
 $ bun dev
-
-# Abrir [http://localhost:3000](http://localhost:3000) no navegador para visualizar o projeto
+```
 
 ## Melhorias Futuras:
 
@@ -117,14 +136,14 @@ $ bun dev
 
 </details>
 
-<br>
 
 ## 🖋️ Dicas
 
-- Documentação oficial para [Next.js](https://nextjs.org/docs/getting-started)
+* Documentação oficial para [Next.js](https://nextjs.org/docs/getting-started)
 
 <hr>
-
 <div align="center">
-  Feito com ❤️ por [Gabriel Martins](https://www.linkedin.com/in/gabriel-martins-0479811b0/) durante o desenvolvimento de Micro SaaS com Next.js 👋
-</div>
+
+Feito com ❤️ por [Gabriel Martins](https://www.linkedin.com/in/gabriel-martins-0479811b0/) Micro SaaS com Next.js 👋
+ 
+ </div>
