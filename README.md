@@ -120,9 +120,6 @@ $ bun dev
 
 ## 🖋️ Dicas
 
-- Usar `Ctrl+Space` para preenchimento automático de código
-- Atalho do IntelliSense `prop` para criar atributos automaticamente
-- Usar atalho `ctor` para criar um construtor de classe rapidamente
 - Documentação oficial para [Next.js](https://nextjs.org/docs/getting-started)
 
 <hr>
