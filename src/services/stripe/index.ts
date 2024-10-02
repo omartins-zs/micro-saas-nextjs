@@ -93,3 +93,44 @@ export const createCheckoutSession = async (
     throw new Error('Error to create checkout session')
   }
 }
+
+export const handleProcessWebhookUpdatedSubscription = async (event: {
+  object: Stripe.Subscription
+}) => {
+  const stripeCustomerId = event.object.customer as string
+  const stripeSubscriptionId = event.object.id as string
+  const stripeSubscriptionStatus = event.object.status
+  const stripePriceId = event.object.items.data[0].price.id
+
+  const userExists = await prisma.user.findFirst({
+    where: {
+      OR: [
+        {
+          stripeSubscriptionId,
+        },
+        {
+          stripeCustomerId,
+        },
+      ],
+    },
+    select: {
+      id: true,
+    },
+  })
+
+  if (!userExists) {
+    throw new Error('user of stripeCustomerId not found')
+  }
+
+  await prisma.user.update({
+    where: {
+      id: userExists.id,
+    },
+    data: {
+      stripeCustomerId,
+      stripeSubscriptionId,
+      stripeSubscriptionStatus,
+      stripePriceId,
+    },
+  })
+}
