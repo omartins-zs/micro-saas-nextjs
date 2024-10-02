@@ -1,7 +1,7 @@
-import { config } from "@/config";
-import Stripe from "stripe";
-import { prisma } from "../database";
+import Stripe from 'stripe'
 
+import { config } from '@/config'
+import { prisma } from '../database'
 
 export const stripe = new Stripe(config.stripe.secretKey || '', {
   apiVersion: '2023-10-16',
@@ -9,8 +9,8 @@ export const stripe = new Stripe(config.stripe.secretKey || '', {
 })
 
 export const getStripeCustomerByEmail = async (email: string) => {
-  const customers = await stripe.customers.list({ email });
-  return customers.data[0];
+  const customers = await stripe.customers.list({ email })
+  return customers.data[0]
 }
 
 export const createStripeCustomer = async (input: {
@@ -134,6 +134,18 @@ export const handleProcessWebhookUpdatedSubscription = async (event: {
     },
   })
 }
+
+type Plan = {
+  priceId: string
+  quota: {
+    TASKS: number
+  }
+}
+
+type Plans = {
+  [key: string]: Plan
+}
+
 export const getPlanByPrice = (priceId: string) => {
   const plans: Plans = config.stripe.plans
 
