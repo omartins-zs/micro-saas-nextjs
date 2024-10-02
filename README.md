@@ -4,11 +4,11 @@
 </h1>
 
 <div align="center">
-  Micro Saas de Tarefas desenvolvido com Next.js 14, Shadcn UI, Prisma e Next Auth.
+  Micro SaaS de Tarefas desenvolvido com Next.js 14, Shadcn UI, Prisma e Next Auth.
 </div>
 
 <div align="center">
-  <cite>Um projeto SaaS autenticação e login com magic link, gerenciamento de usuários, e integração com Stripe para assinaturas, utilizando o padrão de componentes Composition Pattern.</cite>
+  <cite>Um projeto SaaS focado em autenticação e login com magic link, gerenciamento de usuários, e integração com Stripe para assinaturas, utilizando o padrão de componentes (Composition Pattern).</cite>
 </div>
 
 <p align="center">
@@ -38,6 +38,7 @@
 - **React Hook Form** para gerenciamento de formulários no frontend
 - **Stripe** para implementação de pagamentos e assinaturas
 - **Nodemailer** para envio de emails
+- **[v0.dev](https://v0.dev/)** para criar interfaces web incríveis com IA
 
 ## 🔨🔮 Funcionalidades
 - Autenticação de usuários com NextAuth.js
@@ -48,14 +49,13 @@
 
 <hr>
 
-<div align="center">
+<!-- <div align="center">
   <h3><i>Documentação e Layout</i></h3>
   <img align="center" src="./DocumentacaoSaasNext.png" alt="Documentação do Projeto">
-</div>
+</div> -->
 
 ## 📝 Pacotes Utilizados
 <i>
-
 - **Prisma** - ORM para manipulação do banco de dados
 - **NextAuth.js** - Gerenciamento de autenticação e sessões
 - **React Hook Form** - Gerenciamento de formulários com validação
@@ -63,7 +63,6 @@
 - **Nodemailer** - Envio de emails de confirmação de cadastro
 - **ESLint Rocketseat Config** - Configuração do ESLint para padronização de código
 - **Tanstack React Table** - Gerenciamento de tabelas no frontend
-
 </i>
 
 ## Comandos 👨‍💻💻
@@ -72,14 +71,16 @@
 $ npx create-next-app@latest micro-saas-nextjs
 
 # Instalar dependências do Shadcn UI
-$ npx shadcn@latest init
-$ npx shadcn@latest add
+$ npx shadcn-ui@latest init
+$ npx shadcn-ui@latest add
 
 # Instalar bibliotecas de formulário e autenticação
-$ npm install react-hook-form next-auth
+$ npm install react-hook-form
+$ npm install next-auth@beta
 
 # Instalar e configurar Prisma
 $ npm install prisma --save-dev
+$ npx prisma init
 $ npx prisma migrate dev --name init
 $ npm install @auth/prisma-adapter
 
