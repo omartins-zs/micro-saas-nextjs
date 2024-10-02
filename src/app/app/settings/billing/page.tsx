@@ -9,8 +9,13 @@ import {
 } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
 import { createCheckoutSessionAction } from './actions'
+import { auth } from '@/services/auth'
+import { getUserCurrentPlan } from '@/services/stripe'
 
-export default function Page() {
+export default async function Page() {
+  const session = await auth()
+  const plan = await getUserCurrentPlan(session?.user.id as string)
+
   return (
     <form action={createCheckoutSessionAction}>
       <Card>
