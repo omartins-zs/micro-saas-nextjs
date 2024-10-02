@@ -45,29 +45,51 @@ export const createStripeCustomer = async (input: {
   return createdCustomer
 }
 
-export const createCheckoutSession = async (userId: string, userEmail: string) => {
+export const createCheckoutSession = async (
+  userId: string,
+  userEmail: string,
+  userStripeSubscriptionId: string,
+) => {
   try {
-    let customer = await createStripeCustomer({
-      email: userEmail
+    const customer = await createStripeCustomer({
+      email: userEmail,
     })
 
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
-      mode: 'subscription',
-      client_reference_id: userId,
+    const subscription = await stripe.subscriptionItems.list({
+      subscription: userStripeSubscriptionId,
+      limit: 1,
+    })
+
+    const session = await stripe.billingPortal.sessions.create({
       customer: customer.id,
-      success_url: `http://localhost:3000/app/settings/billing?success=true`,
-      cancel_url: `http://localhost:3000/app/settings/billing?success=false`,
-      line_items: [{
-        price: config.stripe.plans.pro.stripeId,
-        quantity: 1
-      }],
-    });
+      return_url: 'http://localhost:3000/app/settings/billing',
+      flow_data: {
+        type: 'subscription_update_confirm',
+        after_completion: {
+          type: 'redirect',
+          redirect: {
+            return_url:
+              'http://localhost:3000/app/settings/billing?success=true',
+          },
+        },
+        subscription_update_confirm: {
+          subscription: userStripeSubscriptionId,
+          items: [
+            {
+              id: subscription.data[0].id,
+              price: config.stripe.plans.pro.priceId,
+              quantity: 1,
+            },
+          ],
+        },
+      },
+    })
 
     return {
-      url: session.url
+      url: session.url,
     }
   } catch (error) {
+    console.error(error)
     throw new Error('Error to create checkout session')
   }
 }
