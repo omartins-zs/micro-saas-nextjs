@@ -9,6 +9,7 @@ export const {
 	handlers: { GET, POST },
 	auth,
 } = NextAuth({
+	secret: process.env.AUTH_SECRET || 'dummy_auth_secret_for_build_only',
 	pages: {
 		signIn: '/auth',
 		signOut: '/auth',
