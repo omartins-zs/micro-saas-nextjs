@@ -18,7 +18,7 @@ import { Logo } from "@/components/logo";
 import { Session } from "next-auth";
 
 type MainSidebarProps = {
-  user: Session['user']
+  user?: Session['user']
 }
 
 export function MainSidebar({ user }: MainSidebarProps) {

@@ -3,8 +3,8 @@ import Stripe from 'stripe'
 import { config } from '@/config'
 import { prisma } from '../database'
 
-export const stripe = new Stripe(config.stripe.secretKey || '', {
-  apiVersion: '2023-10-16',
+export const stripe = new Stripe(config.stripe.secretKey || 'dummy_key', {
+  apiVersion: '2023-10-16' as any,
   httpClient: Stripe.createFetchHttpClient(),
 })
 
