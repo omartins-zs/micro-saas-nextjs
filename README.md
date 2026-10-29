@@ -1,149 +1,117 @@
-<h1 align="center"><img align="left" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg">
-  Micro SaaS - Next.js 14 <img align="right" height="40" width="45" src="https://github.com/devicons/devicon/blob/master/icons/prisma/prisma-original.svg"></h1>
-
- <div align="center">
-
- 
-  Micro SaaS de Tarefas desenvolvido com Next.js 14, Shadcn UI, Prisma e Next Auth.
-
-</div>
-
-
-
 <div align="center">
-  
-  <cite>`Um projeto SaaS focado em autenticação e login com magic link, gerenciamento de usuários, e integração com Stripe para assinaturas, utilizando o padrão de componentes (Composition Pattern).`</cite>
-  
-</div>
+
+# ⚡ Micro-SaaS — Next.js 14, Shadcn UI & NextAuth v5
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white"/>
-  <img src="https://img.shields.io/badge/React--Hook--Form-EC5990?style=for-the-badge&logo=react&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Nodemailer-0A080C?style=for-the-badge&logo=nodemailer&logoColor=white"/>
+  <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,prisma,sqlite,nginx,docker" alt="Tech Stack" />
 </p>
 
-<h4 align="center">
-   ✅ Micro SaaS - Next.js 🚀 Concluído ✅
-</h4>
+[![Next.js](https://img.shields.io/badge/Next.js-14.2_App_Router-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Prisma](https://img.shields.io/badge/Prisma-5.20-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+[![NextAuth.js](https://img.shields.io/badge/NextAuth-v5_Beta-purple?style=for-the-badge&logo=auth0&logoColor=white)](https://authjs.dev/)
+[![Docker](https://img.shields.io/badge/Docker_Compose-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Status](https://img.shields.io/badge/Status-Concluído_&_Otimizado-brightgreen?style=for-the-badge)](#)
 
-
- <div align="center">
-
-   <cite align="center">`http://localhost:5000`</cite>
+<cite>Plataforma completa de Micro-SaaS moderna com autenticação passwordless e credenciais de teste em 1 clique, integração de planos com quotas, gestão de tarefas e infraestrutura Docker otimizada.</cite>
 
 </div>
 
+---
 
-## 🔥 **Pré-requisitos**
+## 📌 Visão Geral
 
-- [Node.js](https://nodejs.org/)
-- [npx](https://www.npmjs.com/package/npx)
-- [Prisma CLI](https://www.prisma.io/docs/getting-started/quickstart)
-- [Stripe CLI](https://stripe.com/docs/stripe-cli)
+O **Micro-SaaS Next.js 14** é uma solução completa para lançamento de produtos de software como serviço (SaaS). A aplicação foi construída utilizando os mais modernos padrões do ecossistema React/Next.js:
 
-## 🚀✔️ Tecnologias e Ferramentas Utilizadas
-- **Next.js** para desenvolvimento de aplicações web com React
-- **Shadcn UI** para componentes UI flexíveis
-- **Prisma** como ORM para acesso ao banco de dados
-- **NextAuth.js** para autenticação e gerenciamento de sessões
-- **React Hook Form** para gerenciamento de formulários no frontend
-- **Stripe** para implementação de pagamentos e assinaturas
-- **Nodemailer** para envio de emails
-- **[v0.dev](https://v0.dev/)** para criar interfaces web incríveis com IA
+- **Autenticação Híbrida (NextAuth v5 / Auth.js):** Suporte a Magic Links via Nodemailer e provedor de credenciais com **botões de login rápido em 1 clique** para testes imediatos.
+- **Controle de Assinaturas & Quotas:** Integração com Stripe e controle de limite de tarefas por plano (*Free* com 5 tarefas e *Pro* com 100 tarefas).
+- **Interface Moderna (Linear-like):** Componentes estilizados com Shadcn UI, Radix Primitives, Tailwind CSS e alternância de temas claro/escuro.
+- **Stack Docker Otimizada:** Build standalone do Next.js com Nginx reverse proxy na porta 8080 e cache de assets estáticos.
 
-## 🔨🔮 Funcionalidades
-- Autenticação de usuários com NextAuth.js
-- Integração com Stripe para planos de assinatura (Free e Pro)
-- Formulários gerenciados com React Hook Form
-- Integração com Prisma para gerenciamento do banco de dados
-- Interface de usuário dinâmica com Shadcn UI
+---
 
-<hr>
+## 🏛️ Arquitetura da Solução
 
-<!-- <div align="center">
-  <h3><i>Documentação e Layout</i></h3>
-  <img align="center" src="./DocumentacaoSaasNext.png" alt="Documentação do Projeto">
-</div> -->
-
-## 📝 Pacotes do Nuget e Extensões
-
-<i>
-
-- **Prisma** - ORM para manipulação do banco de dados
-- **NextAuth.js** - Gerenciamento de autenticação e sessões
-- **React Hook Form** - Gerenciamento de formulários com validação
-- **Stripe** - Integração para processamento de pagamentos
-- **Nodemailer** - Envio de emails de confirmação de cadastro
-- **ESLint Rocketseat Config** - Configuração do ESLint para padronização de código
-- **Tanstack React Table** - Gerenciamento de tabelas no frontend
- 
-
-</i>
-
-<br>
- 
-## Comandos 👨‍💻💻  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"/>
-```bash
-
-# Criar um projeto Next.js
-$ npx create-next-app@latest micro-saas-nextjs
-
-# Instalar dependências do Shadcn UI
-$ npx shadcn-ui@latest init
-$ npx shadcn-ui@latest add
-
-# Instalar bibliotecas de formulário e autenticação
-$ npm install react-hook-form
-$ npm install next-auth@beta
-
-# Instalar e configurar Prisma
-$ npm install prisma --save-dev
-$ npx prisma init
-$ npx prisma migrate dev --name init
-$ npm install @auth/prisma-adapter
-
-# Instalar Nodemailer para envio de emails
-$ npm install nodemailer
-
-# Abrir Prisma Studio
-$ npx prisma studio
-
-# Gerar chave secreta para NextAuth
-$ openssl rand -base64 32
-
-# Inicializar o Stripe CLI e configurar webhook
-$ stripe listen --forward-to localhost:3000/api/stripe/webhook
-
-# Iniciar o servidor de desenvolvimento Next.js
-$ npm run dev
-# ou
-$ yarn dev
-# ou
-$ pnpm dev
-# ou
-$ bun dev
+```mermaid
+graph TD
+    User["🌐 Usuário / Navegador"] -->|Porta 8080| Nginx["⚡ Nginx Reverse Proxy"]
+    Nginx -->|Proxy Pass :3000| App["⚡ Next.js 14 Standalone (App Router)"]
+    App -->|Prisma Client| DB[("🗄️ SQLite / dev.db")]
+    App -->|Stripe API| Stripe["💳 Gateway de Assinaturas (Stripe)"]
 ```
 
-## Melhorias Futuras:
+---
 
-<details>
-  <summary>Implementar melhorias na autenticação</summary>
+## ✨ Funcionalidades
 
-- [ ] Melhorar a lógica de autenticação com NextAuth.js v5
-- [ ] Adicionar testes unitários e integração
+- **Dashboard do Assinante:** Visualização de tarefas, barra de progresso de uso da quota do plano e atalhos rápidos.
+- **Gestão de Tarefas (Todos):** Criação, listagem e marcação de tarefas concluídas vinculadas ao ID do usuário autenticado.
+- **Portal de Faturamento (Billing):** Tela de upgrade/downgrade de planos conectada ao Stripe Checkout e Customer Portal.
+- **Perfis Demo em 1 Clique:** Três contas pré-configuradas sem necessidade de confirmação de e-mail.
+- **API de Health Check:** Endpoint `/api/health` para diagnóstico contínuo da aplicação e do Prisma ORM.
 
-</details>
+---
 
+## 👥 Perfis de Acesso & Demonstração (1 Clique)
 
-## 🖋️ Dicas
+Na tela de login (`/auth`), você pode conectar instantaneamente com qualquer um dos perfis abaixo:
 
-* Documentação oficial para [Next.js](https://nextjs.org/docs/getting-started)
+| Perfil | E-mail | Senha | Plano Ativo | Quota de Tarefas |
+|---|---|---|---|---|
+| **Administrador** | `admin@microsaas.com` | `Password@123` | **Plano Pro** | 100 tarefas |
+| **Gerente** | `gerente@microsaas.com` | `Password@123` | **Plano Pro** | 100 tarefas |
+| **Operador** | `operador@microsaas.com` | `Password@123` | **Plano Free** | 5 tarefas |
 
-<hr>
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Framework:** Next.js 14.2.7 (App Router & Server Actions)
+- **Linguagem:** TypeScript 5.0
+- **Estilização:** Tailwind CSS & Shadcn UI (Radix UI)
+- **ORM & Banco:** Prisma ORM com SQLite
+- **Autenticação:** NextAuth.js v5 (Auth.js) com `@auth/prisma-adapter`
+- **Pagamentos:** Stripe SDK
+- **Servidor Web:** Nginx 1.25 Alpine
+- **Conteinerização:** Docker & Docker Compose v2
+
+---
+
+## 🚀 Como Executar
+
+### 1. Clonar o Repositório
+```bash
+git clone https://github.com/omartins-zs/micro-saas-nextjs.git
+cd micro-saas-nextjs
+```
+
+### 2. Execução com Docker (Recomendado)
+```bash
+# Configurar variáveis de ambiente
+cp .env.example .env
+
+# Subir a stack completa
+docker compose up -d --build
+```
+Acesse [http://localhost:8080](http://localhost:8080).
+
+### 3. Execução Local (Host)
+Consulte as instruções detalhadas em [`docs/COMO_EXECUTAR_LOCAL.md`](file:///C:/Projetos/micro-saas-nextjs/docs/COMO_EXECUTAR_LOCAL.md).
+
+---
+
+## 📚 Documentação Complementar
+
+- [Acessos, Credenciais e Testes](file:///C:/Projetos/micro-saas-nextjs/docs/ACESSOS_TESTES.md)
+- [Como Executar - Visão Geral](file:///C:/Projetos/micro-saas-nextjs/docs/COMO_EXECUTAR.md)
+- [Como Executar Localmente](file:///C:/Projetos/micro-saas-nextjs/docs/COMO_EXECUTAR_LOCAL.md)
+- [Como Executar com Docker Compose](file:///C:/Projetos/micro-saas-nextjs/docs/COMO_EXECUTAR_DOCKER.md)
+
+---
+
 <div align="center">
 
-Feito com ❤️ por [Gabriel Martins](https://www.linkedin.com/in/gabriel-martins-0479811b0/) Micro SaaS com Next.js 👋
- 
- </div>
+Feito com ❤️ por **[Gabriel Martins](https://github.com/omartins-zs)** 🚀
+
+</div>
