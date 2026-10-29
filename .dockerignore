@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.github
+.env
+.env*.local
+docs/
+*.md
+*.txt
+.dockerignore
+.eslintrc.json
+tsconfig.tsbuildinfo
